@@ -16,19 +16,19 @@
           %b Risque théorique de diminution de la lactation
 
       %h4 Recul :
-      = fiche.ei
+      = raw fiche.ei
       - if fiche.ei_theoriques?
         %p.retrait
           %b Risque théorique :
-        .retrait= fiche.ei_theoriques
+        .retrait= raw fiche.ei_theoriques
 
       - if fiche.conditions?
         %h4 Allaitement possible si :
-        = fiche.conditions
+        = raw fiche.conditions
 
       - if fiche.surveillance?
         %h4 Surveillance :
-        = fiche.surveillance
+        = raw fiche.surveillance
         %p.surveillance
           La poursuite du traitement ou de l'allaitement doit être reconsidérée et le CRPV prévenu si l'un des troubles cités est observé
 
@@ -43,7 +43,7 @@
       .clear
       - unless fiche.arg_autre.blank?
         %h4 Autres argumentaires :
-        = fiche.arg_autre
+        = raw fiche.arg_autre
 
       - if fiche.suivi == "oui"
         %h4.inline.alert Attention :
